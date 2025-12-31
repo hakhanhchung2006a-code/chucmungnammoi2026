@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chúc Mừng Năm Mới 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(to bottom, #fff1c1, #ffcc70);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            max-width: 600px;
+            z-index: 10;
+        }
+
+        h1 {
+            color: #d35400;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        footer {
+            margin-top: 25px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* HOA MAI RÕ NÉT */
+        .mai {
+            position: absolute;
+            top: -60px;
+            width: 26px;
+            height: 26px;
+            background: #ffd700;
+            border-radius: 50%;
+            box-shadow:
+                -14px 0 #ffd700,
+                14px 0 #ffd700,
+                0 -14px #ffd700,
+                0 14px #ffd700;
+            animation: fall linear infinite;
+        }
+
+        .mai::after {
+            content: "";
+            position: absolute;
+            top: 9px;
+            left: 9px;
+            width: 8px;
+            height: 8px;
+            background: #ff9800;
+            border-radius: 50%;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-60px) rotate(0deg);
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌸 Chúc Mừng Năm Mới 2026 🌸</h1>
+        <p>
+            🌸 Mai vàng rơi nhẹ đầu xuân,<br>
+            Chúc năm mới đến muôn phần bình an.
+        </p>
+        <p>
+            Đường đời thuận gió xuôi thuyền,<br>
+            Niềm vui đủ đầy, ước nguyện vẹn nguyên 🌸<br><br>
+            Chúc cho ai quét QR này có một năm <b>2026</b>
+            an lành, ấm áp và luôn zui zẻ, mạnh khỏe nhee 💖
+        </p>
+        <footer>© 2026 Gareth Chung</footer>
+    </div>
+
+    <script>
+        function createMai() {
+            const mai = document.createElement("div");
+            mai.className = "mai";
+            mai.style.left = Math.random() * window.innerWidth + "px";
+            mai.style.animationDuration = (Math.random() * 4 + 6) + "s";
+            document.body.appendChild(mai);
+
+            setTimeout(() => {
+                mai.remove();
+            }, 12000);
+        }
+
+        setInterval(createMai, 200);
+    </script>
+
+</body>
+</html>
